@@ -1,0 +1,27 @@
+* Intro
+** JetBrains license giveaway
+#+BEGIN_SRC C++ :tangle yes :file random.cpp
+  #include <random>
+  #include <iostream>
+
+  int main()
+  {
+    std::mt19937 rng;
+    rng.seed(std::random_device()());
+    std::uniform_int_distribution<std::mt19937::result_type> dist(1,5);
+
+    std::cout << dist(rng) << "\n";
+  }
+#+END_SRC
+- 1 Graeme
+- 3 Andrew Wilson
+- 4 Andrew P
+* Unit Testing in C++
+** Definitions
+   - Unit Testing
+   - TDD
+   - Mock, Fake, Stub, Test Double
+** Tools
+   - Catch, Google Test, Boost Test, CppUnit, CxxTest
+   - Google Mock, Trompeloeil, Hippomocks, FakeIt
+** Example
